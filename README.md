@@ -10,6 +10,9 @@ A minimalist design using ArchLinux, Hyprland and WayBar
 
 - Hyprland
 - Waybar
+- Kitty
+- Swaylock
+- SDDM
 - Neofetch
 - Cmatrix
 
