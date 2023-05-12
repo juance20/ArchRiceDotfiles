@@ -16,7 +16,7 @@ A minimalist design using ArchLinux, Hyprland and WayBar
 - Neofetch
 - Cmatrix
 
-##To-Do
+## To-Do
 - Waybar
 
 ## Authors
