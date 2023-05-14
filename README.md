@@ -9,15 +9,13 @@ A minimalist design using ArchLinux, Hyprland and WayBar
 ## Features
 
 - Hyprland
+- Waybar
 - Kitty
 - Swaylock
 - SDDM
-- Hyprpaper
+- Swww
 - Neofetch
 - Cmatrix
-
-## To-Do
-- Waybar
 
 ## Authors
 
