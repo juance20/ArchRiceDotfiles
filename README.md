@@ -14,6 +14,8 @@ A minimalist design using ArchLinux, Hyprland and WayBar
 - Neofetch
 - Cmatrix
 
+https://youtu.be/-9OpvKohafE
+
 ## Authors
 
 - [@juance20](https://www.github.com/juance20)
