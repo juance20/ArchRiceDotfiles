@@ -7,7 +7,7 @@
     
     // Choose the order of the modules
     "modules-left": ["idle_inhibitor", "cpu", "memory","custom/external-ip"],
-    "modules-center": ["custom/wallpaper"],
+    "modules-center": ["custom/rock", "custom/wallpaper", "custom/github", "custom/lofi"],
     "modules-right": ["custom/volume", "clock"],
     
     // Modules configuration
@@ -83,7 +83,7 @@
         "spacing": 10
     },
     "clock": {
-        //"timezone": "America/Argenitna/Buenos_Aires",
+        "timezone": "America/Argentina/Buenos_Aires",
         "format": "🕒\n{:%H\n%M}",
         "format-alt": "{:%d\n%m\n%y}"
     },
@@ -178,6 +178,21 @@
     },
     "custom/wallpaper":{
         "format":"",
+        "tooltip":"Wallpaper",
         "on-click": "$HOME/.config/waybar/wallpapers.sh change"
+    },
+    "custom/lofi":{
+        "format": "{}",
+        "exec":"python3 $HOME/.config/waybar/lofi_music_2.py",
+        "on-click": "python3 $HOME/.config/waybar/lofi_music.py",
+        "return-type": "json",
+        "interval":3
+    },
+    "custom/rock":{
+        "format":"{}",
+        "exec":"python3 $HOME/.config/waybar/rock_music_2.py",
+        "on-click": "python3 $HOME/.config/waybar/rock_music.py",
+        "return-type":"json",
+        "interval":3
     }
 }
