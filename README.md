@@ -1,7 +1,7 @@
 
 # ArchRice
 
-A minimalist design using ArchLinux, Hyprland and WayBar
+A minimalist design on ArchLinux, using Hyprland and WayBar
 
 ## Features
 
@@ -11,8 +11,8 @@ A minimalist design using ArchLinux, Hyprland and WayBar
 - Swaylock
 - SDDM
 - Swww
+- MPV
 - Neofetch
-- Cmatrix
 
 https://github.com/juance20/ArchRiceDotfiles/assets/69728320/badcc10b-3e0b-4d95-bc9c-560a2c13fe0a
 
