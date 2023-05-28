@@ -6,7 +6,6 @@
 
 window#waybar {
     background-color: rgba(43, 48, 59, 0);
-    border-bottom: 3px solid rgba(100, 114, 125, 0.5);
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
@@ -92,7 +91,9 @@ button:hover {
 #mpd,
 #custom-external-ip,
 #custom-volume,
-#custom-wallpaper {
+#custom-wallpaper,
+#custom-lofi,
+#custom-rock {
     padding: 0 10px;
     border-radius: 10px;
     background-color: rgba(0, 0, 76, 0.5);
@@ -277,7 +278,7 @@ label:focus {
 }
 
 #idle_inhibitor.activated {
-    background-color: #c75513;
+    background-color: rgba(0, 0, 151, 0.5);;
     font-size: x-large;
 }
 
@@ -332,4 +333,32 @@ label:focus {
 
 #custom-wallpaper {
     font-size: x-large;
+    border-radius: 0px;
+    border-bottom: rgba(0, 0, 0, 0);
+    border-top: rgba(0, 0, 0, 0);
+}
+
+#custom-lofi {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-top: rgba(0, 0, 0, 0);
+    min-height: 30px;
+    font-size: 15px;
+}
+
+#custom-lofi.playing{
+    background-color: rgba(0, 0, 151, 0.5);
+}
+
+#custom-rock {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom: rgba(0, 0, 0, 0);
+    min-height: 30px;
+    font-size: 20px;
+
+}
+
+#custom-rock.playing{
+    background-color: rgba(0, 0, 151, 0.5);
 }
