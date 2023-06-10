@@ -12,6 +12,8 @@ A minimalist design on ArchLinux, using Hyprland and WayBar
 - SDDM
 - Swww
 - MPV
+- Eww
+- Dunst
 - Neofetch
 
 https://github.com/juance20/ArchRiceDotfiles/assets/69728320/badcc10b-3e0b-4d95-bc9c-560a2c13fe0a
