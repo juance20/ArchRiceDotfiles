@@ -1,16 +1,15 @@
 {
-    "layer": "top", // Waybar at top layer
-    "position": "left", // Waybar position (top|bottom|left|right)
-    "height": 730, // Waybar height (to be removed for auto height)
-    "width": 36, // Waybar width
-    "spacing": 0, // Gaps between modules (4px)
+    "layer": "top",
+    "position": "left",
+    "height": 730,
+    "width": 30,
+    "spacing": 0,
+    "margin":"10",
     
-    // Choose the order of the modules
     "modules-left": ["idle_inhibitor", "cpu", "memory","custom/external-ip"],
     "modules-center": ["custom/rock", "custom/wallpaper", "custom/github", "custom/lofi"],
-    "modules-right": ["custom/volume", "clock"],
+    "modules-right": ["custom/firefox","pulseaudio", "clock"],
     
-    // Modules configuration
     "sway/workspaces": {
          "disable-scroll": true,
          "all-outputs": true,
@@ -79,7 +78,6 @@
         }
     },
     "tray": {
-        // "icon-size": 21,
         "spacing": 10
     },
     "clock": {
@@ -95,21 +93,16 @@
         "format": " 🎚️ \n{}%"
     },
     "temperature": {
-        // "thermal-zone": 2,
-        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         "critical-threshold": 80,
-        // "format-critical": "{temperatureC}°C {icon}",
         "format": "{temperatureC}°C {icon}",
         "format-icons": ["", "", ""]
     },
     "backlight": {
-        // "device": "acpi_video1",
         "format": "{percent}% {icon}",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
     "battery": {
         "states": {
-            // "good": 95,
             "warning": 30,
             "critical": 15
         },
@@ -117,15 +110,12 @@
         "format-charging": "{capacity}% ",
         "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
         "format-icons": ["", "", "", "", ""]
     },
     "battery#bat2": {
         "bat": "BAT2"
     },
     "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "{essid} ({signalStrength}%) ",
         "format-ethernet": "󰈀",
         "tooltip-format": "{ifname} via {gwaddr} ",
@@ -134,8 +124,7 @@
         "format-alt": "{netmask}"
     },
     "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
+        "format": " 󰕾 \n{volume}%",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",
@@ -161,8 +150,7 @@
             "default": "🎜"
         },
         "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null"
     },
     "custom/external-ip": {
         "format":"󰈀",
@@ -173,7 +161,7 @@
     },
     "custom/volume": {
         "format":" 󰕾 \n{}",
-        "exec":"awk -F'[][]' '/Left:/ { print $2 }' <(amixer sget PCM)",
+        "exec":"awk -F'[][]' '/Left:/ { print $2 }' <(amixer sget Master)",
         "interval":1
     },
     "custom/wallpaper":{
@@ -186,7 +174,7 @@
         "exec":"python3 $HOME/.config/waybar/lofi_music_2.py",
         "on-click": "python3 $HOME/.config/waybar/lofi_music.py",
         "return-type": "json",
-        "interval":3
+        "interval":1
     },
     "custom/rock":{
         "format":"{}",
@@ -194,5 +182,9 @@
         "on-click": "python3 $HOME/.config/waybar/rock_music.py",
         "return-type":"json",
         "interval":3
+    },
+    "custom/firefox":{
+        "format":"󰈹",
+        "on-click":"eww open --toggle paginas"
     }
 }
