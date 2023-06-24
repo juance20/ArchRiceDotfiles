@@ -8,7 +8,7 @@
     
     "modules-left": ["idle_inhibitor", "cpu", "memory","custom/external-ip"],
     "modules-center": ["custom/rock", "custom/wallpaper", "custom/github", "custom/lofi"],
-    "modules-right": ["custom/firefox","pulseaudio", "clock"],
+    "modules-right": ["custom/audio_output","pulseaudio", "clock"],
     
     "sway/workspaces": {
          "disable-scroll": true,
@@ -186,5 +186,12 @@
     "custom/firefox":{
         "format":"󰈹",
         "on-click":"eww open --toggle paginas"
+    },
+    "custom/audio_output":{
+        "format":"{}",
+        "exec": "python3 $HOME/.config/waybar/audio_output.py",
+        "on-click": "python3 $HOME/.config/waybar/toggle_audio_output.py",
+        "return-type": "json",
+        "interval":3
     }
 }
